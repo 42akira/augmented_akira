@@ -1,5 +1,15 @@
 body{
-    background-color: rgb(62, 16, 33);
+    background-color: rgb(233, 233, 207);
+}
+
+.logoBox{
+    display: flex;
+    justify-content: center;
+}
+
+.bgBoxes{
+    background-color: rgb(214, 171, 114);
+    margin: 4vw;
 }
 
 .logo{
@@ -9,4 +19,5 @@ body{
 #shrek{
 
     width: 30vw;
+    text-align: center;
 }
