@@ -1,23 +1,218 @@
-body{
+body {
     background-color: rgb(233, 233, 207);
+    font-family: Coiny, 'Courier New', Courier, monospace;
+    font-size: 2vw;
 }
 
-.logoBox{
+h1 {
+    font-family: Freckle Face, 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 5vw;
+}
+
+
+/* Logo Container */
+
+.banner_logo_container {
+    display: grid;
+    margin: 2vw;
+}
+
+.logoBox,
+.bannerBox {
+    grid-area: 1 / 1;
+}
+
+.logoBox {
     display: flex;
     justify-content: center;
 }
 
-.bgBoxes{
-    background-color: rgb(214, 171, 114);
-    margin: 4vw;
+.bannerBox {
+    color: black;
 }
 
-.logo{
-    width:40vw;
+
+/*img ids */
+
+#banner {
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100vw;
+    margin: auto;
+
 }
 
-#shrek{
+.logo {
+    width: 40vw;
+}
 
-    width: 30vw;
-    text-align: center;
+/* Background ELements with foreground elements*/
+
+/* z-index braqucht man nicht, wenns schon so richjtig von unten nach oben im DOM Baum platziert ist */
+
+.container {
+    display: grid;
+
+    background-color: rgb(173, 0, 55);
+    border-radius: 3vw;
+
+    padding: 2vw;
+    margin: 2vw;
+
+
+}
+
+.bgBoxes,
+.inhalt {
+    grid-area: 1 / 1;
+}
+
+
+.bgBoxes {
+    color: black;
+
+}
+
+
+.inhalt {
+    color: rgb(233, 233, 207);
+    text-align: justify;
+
+}
+
+/* BILDER */
+
+.bild {
+    width: 20vw;
+    position: absolute;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOR WEBSWIPE CSS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #1c1c1e;
+}
+
+/* Der sichtbare Ausschnitt: schneidet alles ab, was rechts/links liegt */
+.viewport {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Der Track enthält alle Seiten nebeneinander und wird verschoben */
+.track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.45s cubic-bezier(.25, .8, .25, 1);
+}
+
+.page {
+    flex: 0 0 100vw;
+    /* jede Seite ist genau 1 Bildschirmbreite */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.page:nth-child(1) {
+    background: #a47f7f;
+}
+
+.page:nth-child(2) {
+    background: #4f3b4f;
+}
+
+.page:nth-child(3) {
+    background: #d5acac;
+}
+
+.page:nth-child(4) {
+    background: #8e7676;
+}
+
+/* Pfeil-Buttons links/rechts fix positioniert */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.8rem;
+    width: 4vw;
+    height: 4vw;
+    min-width: 70px;
+    min-height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.arrow:hover {
+    background: rgba(34, 33, 33, 0.3);
+}
+
+.arrow.prev {
+    left: 1vw;
+}
+
+.arrow.next {
+    right: 1vw;
+}
+
+.arrow:disabled {
+    opacity: 0.25;
+    cursor: default;
+}
+
+/* kleine Punkte unten zur Orientierung */
+.dots {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    transition: background 0.2s;
+}
+
+.dot.active {
+    background: white;
 }
