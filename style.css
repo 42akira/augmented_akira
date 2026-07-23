@@ -1,5 +1,5 @@
 h1 {
-    font-family: Freckle Face, Impact, 'Courier New', Courier, monospace;
+    font-family: 'Freckle Face', 'Bauhaus 93', Impact, 'Courier New', Courier, monospace;
     text-align: center;
     font-size: 5vw;
 }
@@ -74,6 +74,12 @@ h1 {
     padding-left: 12vw;
 }
 
+.page-3D .container{
+    max-height: 80vw;       /* oder z.B. 80vh, je nach gewünschtem Abstand zum Rand */
+    overflow-y: auto;
+    overflow-x: hidden;     /* horizontal weiterhin nichts anzeigen */
+}
+
 .bgBoxes,
 .inhalt {
     grid-area: 1 / 1;
@@ -121,9 +127,31 @@ h1 {
 
 
 
+/*link*/
 
+#link-3d{
+    text-align: center;
+}
 
+/* unvisited link */
+a:link {
+  color: rgb(255, 230, 245);
+}
 
+/* visited link */
+a:visited {
+  color: rgb(255, 230, 230);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(190, 92, 121);
+}
+
+/* selected link */
+a:active {
+  color: rgb(255, 0, 157);
+}
 
 
 
@@ -222,6 +250,7 @@ body {
     font-size: 2.2rem;
     font-weight: 600;
     position: relative;
+    overflow: hidden;
 }
 
 .page:nth-child(1) {
@@ -315,10 +344,13 @@ body {
 }
 
 .page-3D .bild {
-    width: 10vw;
+    width: 39vw;
+    height: 1vw;
+    
     position: absolute;
-    left: 50%;
+    left: 100vw;
     top: 0;
-    transform: translateX(-50%);
+    right: 0;
+    transform-origin: top left;  /* Rotation um die obere linke Ecke statt Mitte */
     transform: rotate(90deg);
 }
