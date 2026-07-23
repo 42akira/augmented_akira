@@ -1,5 +1,5 @@
 h1 {
-    font-family: Freckle Face, 'Courier New', Courier, monospace;
+    font-family: Freckle Face, Impact, 'Courier New', Courier, monospace;
     text-align: center;
     font-size: 5vw;
 }
@@ -88,7 +88,7 @@ h1 {
 
 .inhalt {
     color: rgb(233, 233, 207);
-    text-align: justify;
+    text-align: center;
     font-family: Coiny, 'Courier New', Courier, monospace;
     font-size: max(20px, 2.2vw);
 
