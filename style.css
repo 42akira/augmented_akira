@@ -11,11 +11,13 @@ h1 {
 }
 
 
+/*
+
 /* Logo Container */
 
 .banner_logo_container {
     display: grid;
-    margin: 2vw;
+    
 }
 
 .logoBox,
@@ -24,12 +26,13 @@ h1 {
 }
 
 .logoBox {
-    display: flex;
-    justify-content: center;
+    color:black;
+    
 }
 
 .bannerBox {
     color: black;
+    
 }
 
 
@@ -39,11 +42,16 @@ h1 {
     background-color: rgb(0, 0, 0, 0.5);
     width: 100vw;
     margin: auto;
+    position: absolute;
 
 }
 
 .logo {
     width: 40vw;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+    top:2vw;
 }
 
 /* Background ELements with foreground elements*/
@@ -80,12 +88,26 @@ h1 {
 
 }
 
-/* BILDER */
+/* BUtton Style */
 
-.bild {
-    width: 20vw;
-    position: absolute;
+.overview-buttons{
+    position:absolute;
+    left:50%;
+    transform: translate(-50%);
+    top:50%;
+    display:flex;
+    gap:8vw;
+    justify-content: center;
+}
 
+.nav-button{
+    width: 15vw;
+    cursor:pointer;
+    transition: transform 0.2s ease;
+}
+
+.nav-button:hover{
+    transform:scale(1.05);
 }
 
 
@@ -131,11 +153,10 @@ body {
     /* jede Seite ist genau 1 Bildschirmbreite */
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
     font-size: 2.2rem;
     font-weight: 600;
+    position: relative;
 }
 
 .page:nth-child(1) {
@@ -215,4 +236,23 @@ body {
 
 .dot.active {
     background: white;
+}
+
+
+
+
+/* Page Unterklassen oder so */
+
+.page-historia .bild{
+    width:20vw;
+    position: absolute;
+}
+
+.page-3D .bild{
+    width:10vw;
+    position: absolute;
+    left: 50%;
+    top:0;
+    transform: translateX(-50%);
+    transform: rotate(90deg);
 }

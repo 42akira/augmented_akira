@@ -15,6 +15,9 @@ for (let i = 0; i < pageCount; i++) {
 }
 const dots = dotsContainer.children;
 
+
+//hier goTo() Funtkion definiert :)
+
 function goTo(index) {
     currentIndex = Math.max(0, Math.min(pageCount - 1, index));
     // Kernidee: Track um (currentIndex * 100%) nach links schieben
@@ -40,3 +43,16 @@ viewport.addEventListener('touchend', e => {
 });
 
 goTo(0);
+
+
+
+//hier button code :)
+
+const navButtons = document.querySelectorAll('.nav-button');
+
+navButtons.forEach(btn => {
+    btn.addEventListener('click', () =>{
+        const target = parseInt(btn.dataset.target, 10);
+        goTo(target);
+    })
+})
