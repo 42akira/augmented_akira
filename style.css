@@ -60,6 +60,7 @@ h1 {
     border-radius: 3vw;
 
     padding: 2vw;
+    padding-top: 0;
     margin: 2vw;
 
     overflow: hidden;
@@ -89,9 +90,43 @@ h1 {
     color: rgb(233, 233, 207);
     text-align: justify;
     font-family: Coiny, 'Courier New', Courier, monospace;
-    font-size: 2.2vw;
+    font-size: max(20px, 2.2vw);
+
 
 }
+
+
+/*custom inhalte und bgboxen für die jweilige page*/
+
+.page-3D .inhalt {
+    font-size: max(20px, 1.5vw);
+    text-align: left;
+
+}
+
+
+
+
+/* p abstand :) */
+
+.controls {
+    background-color:rgb(0, 0, 0, 0.5);
+    border-radius: 1vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: max(15px, 1vw);
+    padding: 1vw;
+    
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -137,7 +172,7 @@ h1 {
 
     .page-historia .container {
         margin-left: 100px;
-        
+
         padding-left: 70px;
     }
 
