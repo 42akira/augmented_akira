@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script> <!--defer dafür, dass erst gewartet wird-->
 
+
+    <link rel="stylesheet" href="chess_model/styles.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+
+
 </head>
 
 <body>
@@ -17,10 +22,10 @@
         <div class="track" id="track">
             <div class="page page-logo"> <!--PAGE 1 LOGO-->
 
-                
+
                 <div class="banner_logo_container">
 
-                    
+
                     <div class="bannerBox">
                         <img id="banner" src="images/chess_collage2.jpg" alt="">
                     </div>
@@ -30,9 +35,11 @@
                     </div>
 
                     <div class="overview-buttons">
-                        <img class="nav-button" data-target="1" src="images/buttons/historia_both.svg" alt="Zur Historia Seite">
+                        <img class="nav-button" data-target="1" src="images/buttons/historia_both.svg"
+                            alt="Zur Historia Seite">
                         <img class="nav-button" data-target="2" src="images/buttons/3d_both.svg" alt="Zur 3D Seite">
-                        <img class="nav-button" data-target="3" src="images/buttons/kontakt_both.svg"  alt="Zur Kontakt Seite">
+                        <img class="nav-button" data-target="3" src="images/buttons/kontakt_both.svg"
+                            alt="Zur Kontakt Seite">
                     </div>
 
                     <div class="bannerBox">
@@ -50,7 +57,7 @@
                     <img src="images/kariert3.svg" alt="">
                 </div>
 
-                <div class="container" style="margin-left: 10vw; margin-right: 1vw; padding-left: 12vw;">
+                <div class="container">
                     <div class="bgBoxes">
 
                     </div>
@@ -89,12 +96,25 @@
                     </div>
                 </div>
 
+                <!--modelviewer einfach rüberkopiert vom index von 3d model, nur pfade geändert :)-->
 
+                <model-viewer src="chess_model/chess_scene_final.glb" 
+                    camera-orbit="3.2rad 1.5rad 2.5m"
+                    camera-target="0m 3.5m 0m"
+                    ar ar-modes="webxr scene-viewer quick-look"
+                    camera-controls tone-mapping="neutral" poster="chess_model/poster.webp" shadow-intensity="1.34"
+                    exposure="0.76" environment-image="chess_model/music_hall_01_1k.hdr" shadow-softness="0.74">
 
-                <a href="chess_model/index.html">Hier zum 3D MOdel :)</a>
-
-
-
+                    <div class="progress-bar hide" slot="progress-bar">
+                        <div class="update-bar"></div>
+                    </div>
+                    <button slot="ar-button" id="ar-button">
+                        View in your space
+                    </button>
+                    <div id="ar-prompt">
+                        <img src="chess_model/ar_hand_prompt.png">
+                    </div>
+                </model-viewer>
 
 
             </div>
