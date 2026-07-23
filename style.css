@@ -74,10 +74,12 @@ h1 {
     padding-left: 12vw;
 }
 
-.page-3D .container{
-    max-height: 80vw;       /* oder z.B. 80vh, je nach gewünschtem Abstand zum Rand */
+.page-3D .container {
+    max-height: 80vw;
+    /* oder z.B. 80vh, je nach gewünschtem Abstand zum Rand */
     overflow-y: auto;
-    overflow-x: hidden;     /* horizontal weiterhin nichts anzeigen */
+    overflow-x: hidden;
+    /* horizontal weiterhin nichts anzeigen */
 }
 
 .bgBoxes,
@@ -116,12 +118,12 @@ h1 {
 /* p abstand :) */
 
 .controls {
-    background-color:rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.5);
     border-radius: 1vw;
     font-family: 'Courier New', Courier, monospace;
     font-size: max(15px, 1vw);
     padding: 1vw;
-    
+
 
 }
 
@@ -129,28 +131,28 @@ h1 {
 
 /*link*/
 
-#link-3d{
+#link-3d {
     text-align: center;
 }
 
 /* unvisited link */
 a:link {
-  color: rgb(255, 230, 245);
+    color: rgb(255, 230, 245);
 }
 
 /* visited link */
 a:visited {
-  color: rgb(255, 230, 230);
+    color: rgb(255, 230, 230);
 }
 
 /* mouse over link */
 a:hover {
-  color: rgb(190, 92, 121);
+    color: rgb(190, 92, 121);
 }
 
 /* selected link */
 a:active {
-  color: rgb(255, 0, 157);
+    color: rgb(255, 0, 157);
 }
 
 
@@ -346,11 +348,48 @@ body {
 .page-3D .bild {
     width: 39vw;
     height: 1vw;
-    
+
     position: absolute;
     left: 100vw;
     top: 0;
     right: 0;
-    transform-origin: top left;  /* Rotation um die obere linke Ecke statt Mitte */
+    transform-origin: top left;
+    /* Rotation um die obere linke Ecke statt Mitte */
     transform: rotate(90deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ig here some contact css from other website */
+
+
+.page-kontakt .container {
+    max-height: 80vw;
+    /* oder z.B. 80vh, je nach gewünschtem Abstand zum Rand */
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+
+#insta{
+    width:5vw;
+}
+
+
+#rafa {
+    width: 50vw;
+    opacity: 0.5;
+    z-index: -1;
 }
