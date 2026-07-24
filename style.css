@@ -350,7 +350,7 @@ body {
     position: absolute;
     width: 20vw;
     left:50vw;
-    top:max(600px, 55vw);
+    top:max(700px, 70vw);
     
    
     
@@ -359,7 +359,14 @@ body {
     transform: rotate(90deg);
 }
 
+.qr{
+    display: flex;
+    justify-content: center;
+}
 
+.qr img{
+    width:20vw;
+}
 
 
 
