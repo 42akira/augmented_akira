@@ -358,8 +358,8 @@ body {
 .page-3D .bild {
     position: absolute;
     width: 20vw;
-    left:50vw;
-    top:max(700px, 70vw);
+    left:60vw;
+    top:max(800px, 75vw);
     
    
     
@@ -375,6 +375,7 @@ body {
 
 .qr img{
     width:20vw;
+    min-width: 200px;
 }
 
 
