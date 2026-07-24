@@ -75,6 +75,7 @@ h1 {
 }
 
 .page-3D .container {
+    position: relative;
     max-height: 80vw;
     /* oder z.B. 80vh, je nach gewünschtem Abstand zum Rand */
     overflow-y: auto;
@@ -346,13 +347,13 @@ body {
 }
 
 .page-3D .bild {
-    width: 39vw;
-    height: 1vw;
-
     position: absolute;
-    left: 100vw;
-    top: 0;
-    right: 0;
+    width: 20vw;
+    left:50vw;
+    top:max(600px, 55vw);
+    
+   
+    
     transform-origin: top left;
     /* Rotation um die obere linke Ecke statt Mitte */
     transform: rotate(90deg);
